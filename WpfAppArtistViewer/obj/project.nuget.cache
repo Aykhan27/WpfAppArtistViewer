@@ -1,0 +1,72 @@
+{
+  "version": 2,
+  "dgSpecHash": "MsliXOXIZLx1dq2hNqgm7mW8zU0baalFd75RRcYsf7swfixpUYVEpk+pdJNw/gXctBUeWLVIa80iJlHPpb4vTw==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Ruhlan\\source\\repos\\WpfAppArtistViewer\\WpfAppArtistViewer\\WpfAppArtistViewer.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Ruhlan\\.nuget\\packages\\controlzex\\3.0.2.4\\controlzex.3.0.2.4.nupkg.sha512",
+    "C:\\Users\\Ruhlan\\.nuget\\packages\\mahapps.metro\\1.6.0\\mahapps.metro.1.6.0.nupkg.sha512",
+    "C:\\Users\\Ruhlan\\.nuget\\packages\\materialdesigncolors\\1.2.3\\materialdesigncolors.1.2.3.nupkg.sha512",
+    "C:\\Users\\Ruhlan\\.nuget\\packages\\materialdesignthemes\\3.1.0\\materialdesignthemes.3.1.0.nupkg.sha512",
+    "C:\\Users\\Ruhlan\\.nuget\\packages\\materialdesignthemes.mahapps\\0.1.0\\materialdesignthemes.mahapps.0.1.0.nupkg.sha512",
+    "C:\\Users\\Ruhlan\\.nuget\\packages\\microsoft.netcore.platforms\\1.0.1\\microsoft.netcore.platforms.1.0.1.nupkg.sha512",
+    "C:\\Users\\Ruhlan\\.nuget\\packages\\microsoft.netcore.targets\\1.0.1\\microsoft.netcore.targets.1.0.1.nupkg.sha512",
+    "C:\\Users\\Ruhlan\\.nuget\\packages\\microsoft.xaml.behaviors.wpf\\1.1.19\\microsoft.xaml.behaviors.wpf.1.1.19.nupkg.sha512",
+    "C:\\Users\\Ruhlan\\.nuget\\packages\\mvvmlightlibsstd10\\5.4.1.1\\mvvmlightlibsstd10.5.4.1.1.nupkg.sha512",
+    "C:\\Users\\Ruhlan\\.nuget\\packages\\simpleinjector\\4.9.2\\simpleinjector.4.9.2.nupkg.sha512",
+    "C:\\Users\\Ruhlan\\.nuget\\packages\\system.componentmodel\\4.0.1\\system.componentmodel.4.0.1.nupkg.sha512",
+    "C:\\Users\\Ruhlan\\.nuget\\packages\\system.runtime\\4.1.0\\system.runtime.4.1.0.nupkg.sha512"
+  ],
+  "logs": [
+    {
+      "code": "NU1602",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "MahApps.Metro 1.6.0 does not provide an inclusive lower bound for dependency ControlzEx (> 3.0.2 && < 4.0.0). An approximate best match of ControlzEx 3.0.2.4 was resolved.",
+      "libraryId": "ControlzEx",
+      "targetGraphs": [
+        ".NETCoreApp,Version=v3.1"
+      ]
+    },
+    {
+      "code": "NU1608",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Detected package version outside of dependency constraint: MaterialDesignThemes.MahApps 0.1.0 requires MaterialDesignThemes (> 2.5.1 && < 3.0.0) but version MaterialDesignThemes 3.1.0 was resolved.",
+      "libraryId": "MaterialDesignThemes",
+      "targetGraphs": [
+        ".NETCoreApp,Version=v3.1"
+      ]
+    },
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'ControlzEx 3.0.2.4' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8' instead of the project target framework '.NETCoreApp,Version=v3.1'. This package may not be fully compatible with your project.",
+      "libraryId": "ControlzEx",
+      "targetGraphs": [
+        ".NETCoreApp,Version=v3.1"
+      ]
+    },
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'MahApps.Metro 1.6.0' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8' instead of the project target framework '.NETCoreApp,Version=v3.1'. This package may not be fully compatible with your project.",
+      "libraryId": "MahApps.Metro",
+      "targetGraphs": [
+        ".NETCoreApp,Version=v3.1"
+      ]
+    },
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'MaterialDesignThemes.MahApps 0.1.0' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8' instead of the project target framework '.NETCoreApp,Version=v3.1'. This package may not be fully compatible with your project.",
+      "libraryId": "MaterialDesignThemes.MahApps",
+      "targetGraphs": [
+        ".NETCoreApp,Version=v3.1"
+      ]
+    }
+  ]
+}
