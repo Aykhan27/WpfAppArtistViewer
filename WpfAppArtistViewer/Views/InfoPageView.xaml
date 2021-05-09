@@ -1,0 +1,81 @@
+﻿<UserControl x:Class="WpfAppArtistViewer.Views.InfoPageView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:WpfAppArtistViewer.Views"
+             xmlns:views="clr-namespace:WpfAppArtistViewer.Views"
+             xmlns:viewModels="clr-namespace:WpfAppArtistViewer.ViewModels"
+             mc:Ignorable="d" 
+             d:DesignHeight="600" d:DesignWidth="550"  FontSize="16" x:Name="Control">
+    <Grid Height="{Binding Height,ElementName=Control}">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <TextBlock Grid.Row="0" TextAlignment="Center" FontSize="30" Foreground="Indigo" Text="{Binding ArtistName ,StringFormat=Info about {0}}"/>
+        <Grid Grid.Row="1" Height="1" Background="Indigo" Margin="15,0,15,0"/>
+        <Grid Grid.Row="2" Height="150" Margin="15,15,15,0" HorizontalAlignment="Center">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="120"/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+            <Grid Grid.Column="0" Margin="15" Background="WhiteSmoke">
+                <Image Source="{Binding ImgageSource}" Margin="10"></Image>
+            </Grid>
+            <Grid Grid.Column="1" Margin="10" >
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+                <TextBlock Grid.Row="0" Text="{Binding ArtistName,StringFormat=Name: {0}}"/>
+                <TextBlock Grid.Row="1" Text="{Binding FirstPublished,StringFormat=First publis: {0}}"/>
+                <TextBlock Grid.Row="2" Text="{Binding Listeners,StringFormat=Listeners: {0}}"/>
+            </Grid>
+            <Grid Grid.Row="1" Grid.ColumnSpan="2" Height="1" Background="Indigo"/>
+        </Grid>
+        <Grid Grid.Row="3">
+            <StackPanel>
+                <TextBlock FontWeight="Bold" FontSize="20" TextAlignment="Center" Margin="15,15,15,5">Bio</TextBlock>
+                <Grid Height="1" Background="Black" Margin="60,0,60,0"/>
+                <TextBlock FontSize="13" TextAlignment="Center" TextWrapping="Wrap" Margin="15,15,15,15" Text="{Binding Bio}"/>
+                <Grid Height="1" Background="Black" Margin="60,0,60,0"/>
+                <TextBlock FontSize="20" FontWeight="Bold" TextAlignment="Center" Margin="15,15,15,5">Simular Artist</TextBlock>
+                <Grid VerticalAlignment="Center" HorizontalAlignment="Center">
+                    <ListBox ItemsSource="{Binding SimilarArtist}">
+                        <ListBox.ItemsPanel>
+                            <ItemsPanelTemplate>
+                                <StackPanel Orientation="Horizontal"/>
+                            </ItemsPanelTemplate>
+                        </ListBox.ItemsPanel>
+                        <ListBox.ItemTemplate>
+                            <DataTemplate>
+                                <Grid Grid.Row="0" Height="200">
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="6*"/>
+                                        <RowDefinition Height="1*"/>
+                                        <RowDefinition Height="2*"/>
+                                    </Grid.RowDefinitions>
+                                    <Grid Grid.Row="0" Margin="15" Background="WhiteSmoke">
+                                        <Image Source="{Binding image.text}" ></Image>
+                                    </Grid>
+                                    <TextBlock Grid.Row="1" TextAlignment="Center" Text="{Binding name}"/>
+                                    <Button Grid.Row="2" Command="{Binding DataContext.ReadMoreCommand , ElementName=Control}" CommandParameter="{Binding}" Margin="15,0,15,0" Style="{StaticResource MaterialDesignOutlinedButton}" ToolTip="MaterialDesignOutlinedButton">
+                                        Read  More
+                                    </Button>
+                                </Grid>
+                            </DataTemplate>
+                        </ListBox.ItemTemplate>
+                    </ListBox>
+                </Grid>
+            </StackPanel>
+        </Grid>
+    </Grid>
+</UserControl>
